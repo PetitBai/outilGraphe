@@ -39,7 +39,6 @@ public class Map extends JFrame{
 		jToolBar.add(zoomButton2);
 		jToolBar.add(selectArc);
 		jToolBar.add(selectNode);
-		String nodeId = null;
 		selectNode.addActionListener(new ActionListener() {		
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -53,8 +52,7 @@ public class Map extends JFrame{
 		frame.setLocationRelativeTo(null);
 		frame.add(jToolBar, BorderLayout.PAGE_START);
 		frame.add(new graphics());
-		//frame.setContentPane(new graphics());//�ѻ��ĵ���ӵ�������
-		System.out.println(nodeId);
+		//frame.setContentPane(new graphics());//add map to framework
 	}
 }
 
