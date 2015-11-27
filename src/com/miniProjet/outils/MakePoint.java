@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class MakePoint {
 	public static ArrayList<Point> point = new ArrayList<Point>();
 	
-	//�Ѿ�γ��ת������Ļ���겢������point������
+	//change longitute and latitude to view point
 	public static void makeScreenPoint(){
 		for(int i = 0;i<ReadData.longitude.size();i++){
 			point.add(changeToScreenPoint(ReadData.NODE_PATH,ReadData.longitude.get(i), ReadData.latitude.get(i)));
