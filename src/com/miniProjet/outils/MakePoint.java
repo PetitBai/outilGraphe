@@ -7,6 +7,8 @@ import java.util.ArrayList;
  * http://blog.csdn.net/pipi0714/article/details/5987107
  * i don't all understand the article,just use the method
  * the most code is in the method changeToScreenPoint()
+ * 
+ * Yeah, I will check it out!
  */
 public class MakePoint {
 	public static ArrayList<Point> point = new ArrayList<Point>();
