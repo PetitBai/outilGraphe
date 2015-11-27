@@ -5,8 +5,8 @@ import java.util.ArrayList;
 /*
  * change longitute and latitude to view point,you can read the article as follow link:
  * http://blog.csdn.net/pipi0714/article/details/5987107
- *
- * 
+ * i don't all understand the article,just use the method
+ * the most code is in the method changeToScreenPoint()
  */
 public class MakePoint {
 	public static ArrayList<Point> point = new ArrayList<Point>();
@@ -47,9 +47,8 @@ public class MakePoint {
         int DIVISOR;
         
         /*
-         * ����֮������if�ж�����Ϊ������������ݵ�DIVISOR��ֵ��ȫһ���������޷������ػ����������еĵ�ͼ
-         * ���Էֱ��趨DIVISOR��ֵ
-         * x��y����DIVISOR֮��������������Ϊ�õ������ܴ󣬼���֮�������ֵ�����ȶ���1366*768���ҵĵ��Եķֱ��ʣ���Χ��
+         * according to the node file's name to set the value of DIVISOR
+         * because if we set DIVISOR only one value ,we can't get all the map
          */
         if(filename.equals("paris_noeuds.csv")){
         	 DIVISOR = 36;
