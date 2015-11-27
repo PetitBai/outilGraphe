@@ -3,7 +3,6 @@ package com.miniProjet.view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,7 +16,7 @@ import com.miniProjet.outils.MakePoint;
 import com.miniProjet.outils.ReadData;
 
 /*
- * ����MakePoint���µ�point�����ﱣ������껭����ͼ
+ * interface and draw map
  */
 public class Map extends JFrame{
 	/**
@@ -26,9 +25,6 @@ public class Map extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	
-	
-	
-	//������
 	public static void makeMap() {
 		JFrame frame = new JFrame();
 		frame.setBounds(10, 10, 1360, 760);
@@ -44,28 +40,13 @@ public class Map extends JFrame{
 		jToolBar.add(selectArc);
 		jToolBar.add(selectNode);
 		String nodeId = null;
-		selectNode.addActionListener(new ActionListener() {
-			
+		selectNode.addActionListener(new ActionListener() {		
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				TextField text1, text2; 
-				text1 = new TextField("�������룺", 10);  
-		        text1.setEditable(false);  
-		        text2 = new TextField(10);  
-		        text2.setEchoChar('*');  
+		        // s save the number inputed by user
 		        String s=JOptionPane.showInputDialog("Please input the id of node:");
 			}
 		});
-//		zoomButton1.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				ReadData.readNode(ReadData.NODE_PATH);//��node�ļ�������
-//				MakePoint.makeScreenPoint();//ת��
-//				for(int i = 0;i<MakePoint.point.size();i++){
-//					MakePoint.point.get(i).x *= 2;
-//					MakePoint.point.get(i).y *= 2;
-//				}
-//			}
-//		});
 		/****************************************************************/
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
@@ -86,11 +67,11 @@ class graphics extends JPanel {
 
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		ReadData.readNode(ReadData.NODE_PATH);//��node�ļ�������
-		MakePoint.makeScreenPoint();//ת��
+		ReadData.readNode(ReadData.NODE_PATH);//read data
+		MakePoint.makeScreenPoint();//get points
 	
 		for(int i = 0;i<MakePoint.point.size();i++){
-			g.drawString(".",MakePoint.point.get(i).x,MakePoint.point.get(i).y);//����
+			g.drawString(".",MakePoint.point.get(i).x,MakePoint.point.get(i).y);//draw map
 			g.setColor(Color.RED);//set brush's color
 		}
 	}

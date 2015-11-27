@@ -19,30 +19,30 @@ public class MakePoint {
 	}
 	
 	public static Point changeToScreenPoint(String filename,double longitude,double latitude){
-		int POLAR_RADII   =   6356752 ;  //����[�ϼ�]�İ뾶
-	    int EQUATOR_RADII = 6378137  ; //����İ뾶
+		int POLAR_RADII = 6356752 ;  //Polar radius
+	    int EQUATOR_RADII = 6378137; //Equatorial radius
 	    
-	    //1:�Ѿ�γ��ת��Ϊ������
+	    //1:
 		double laRadian,loRadian;
 		loRadian = longitude*Math.PI/180;
 		laRadian = latitude*Math.PI/180;
              
-        //2:�����������Ĳ��վ���
+        //2:
         double m_refY,m_refX;
         m_refY = POLAR_RADII + (EQUATOR_RADII - POLAR_RADII)*(90 - longitude)/90;
         m_refX = m_refY*Math.cos(laRadian);
         
-        //3:����֪��ľ�γ��ת���ɻ���; ��(�ձ�)��Ϊ��:N35.54.10.8 E139.37.37��������ƪ�������ձ���д�ģ�
+        //3:location of a city in japan:N35.54.10.8 E139.37.37
         double relaRadian,reloRadian;
         relaRadian  = (35 + 54/60 + 10.8/3600) * Math.PI/180;
         reloRadian  = (139 + 37/60 +37/3600) * Math.PI/180;
 
         
-        //4:��������ص�,�Թ���Ļ��ʾ
+        //4:
         double dx =  (reloRadian - loRadian)*m_refX;
         double dy = -(relaRadian - laRadian)*m_refY;
         
-        //5:DIVISORΪ����λ�þ�������ص���뻻���ϵ��,��С�ɸ�������Լ�����.
+        //5:
         Point point = new Point();
         int DIVISOR;
         

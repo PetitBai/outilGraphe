@@ -4,18 +4,18 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 /*
- * ��node�ļ���arc�ļ�������
+ * read data from node and arc files
  */
 public class ReadData {
-		//��װ�ļ�·��,ÿ�λ����е�ʱ��ֱ����������ļ�·��
+		//the path of node and arc files
 		public static final String NODE_PATH = "Data/sf_noeuds.csv";
 		public static final String ARC_PATH = "Data/paris_arcs.csv";
 		
-		//��ÿ����ľ�γ��
+		//two arraylists for saving the values of longitude and latitude
 		public static ArrayList<Double> longitude = new ArrayList<Double>();
         public static ArrayList<Double> latitude = new ArrayList<Double>();
         
-		//��ÿ���ߵ���㣬�յ㣬���ȣ�Σ��ϵ��
+		//four arraylists for saving the values of source,target,distance and dang 
         public static ArrayList<Integer> source = new ArrayList<Integer>();
         public static ArrayList<Integer> target = new ArrayList<Integer>();
         public static ArrayList<Integer> distance = new ArrayList<Integer>();
