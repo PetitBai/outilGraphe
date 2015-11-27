@@ -21,23 +21,22 @@ public class ReadData {
         public static ArrayList<Integer> distance = new ArrayList<Integer>();
         public static ArrayList<Integer> dang = new ArrayList<Integer>();
  		
-		//��װ��node�ļ��ķ���
+		//read node file
 		public static void readNode(String filename){       
 			try {
 	            BufferedReader reader = new BufferedReader(new FileReader(filename));
-	           reader.readLine();//��һ����Ϣ��Ϊ������Ϣ������
+	           reader.readLine();//The first line isn't useful,there isn't data.
 	            String line = null;
 	          
 	            while((line=reader.readLine())!=null){
-	            	//��ÿ�����ݶ���������
-	                //String item[] = line.split(",");//CSV��ʽ�ļ�Ϊ���ŷָ����ļ���������ݶ����з�
+	            	//read data to sting array
 	            	String item[] = line.split("\t");
 	            	
-	                //��stringֵת��double
+	                //change the value type from sting to double
 	                double dLongitude = Double.parseDouble(item[item.length-2]);
 	                double dLatitude = Double.parseDouble(item[item.length-1]);
 	                
-	                //�Ѿ�γ�ȵ�ֵ�ӵ���Ӧ��������
+	                //add value to arraylist
 	               longitude.add(dLongitude);
 	               latitude.add(dLatitude); 
 	            }
@@ -47,24 +46,23 @@ public class ReadData {
 	        }		
 		}
 		
-		//��װ��arc�ļ��ķ���
+		//read arc file
 		public static void readArc(String filename){       
 			try {
 	            BufferedReader reader = new BufferedReader(new FileReader(filename));
-	            reader.readLine();//��һ����Ϣ��Ϊ������Ϣ������,�����Ҫ��ע�͵�
+	            reader.readLine();
 	            String line = null;
 	          
 	            while((line=reader.readLine())!=null){
-	            	//��ÿ�����ݶ���������
-	                //String item[] = line.split(",");//CSV��ʽ�ļ�Ϊ���ŷָ����ļ���������ݶ����з�
-	            	String item[] = line.split("\t"); //On mac, split by Tab
-	                //��stringֵת��int
+	            	
+	            	String item[] = line.split("\t"); 
+	                //change the value type from sting to int
 	                int iSource = Integer.parseInt(item[item.length-4]);
 	                int iTarget = Integer.parseInt(item[item.length-3]);
 	                int iDistance = Integer.parseInt(item[item.length-2]);
 	                int iDang = Integer.parseInt(item[item.length-1]);
 	                
-	                //����㣬�յ㣬���ȣ�Σ��ϵ����ֵ�ӵ���Ӧ��������
+	                //add value to arraylist
 	                source.add(iSource);
 	                target.add(iTarget);
 	                distance.add(iDistance);

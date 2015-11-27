@@ -17,7 +17,7 @@ import com.miniProjet.outils.MakePoint;
 import com.miniProjet.outils.ReadData;
 
 /*
- * ¸ù¾ÝMakePointÀàÏÂµÄpointÊý×éÀï±£´æµÄ×ø±ê»­³öµØÍ¼
+ * ï¿½ï¿½ï¿½ï¿½MakePointï¿½ï¿½ï¿½Âµï¿½pointï¿½ï¿½ï¿½ï¿½ï¿½ï±£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê»­ï¿½ï¿½ï¿½ï¿½Í¼
  */
 public class Map extends JFrame{
 	/**
@@ -28,7 +28,7 @@ public class Map extends JFrame{
 	
 	
 	
-	//»­½çÃæ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static void makeMap() {
 		JFrame frame = new JFrame();
 		frame.setBounds(10, 10, 1360, 760);
@@ -49,7 +49,7 @@ public class Map extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				TextField text1, text2; 
-				text1 = new TextField("ÊäÈëÃÜÂë£º", 10);  
+				text1 = new TextField("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º", 10);  
 		        text1.setEditable(false);  
 		        text2 = new TextField(10);  
 		        text2.setEchoChar('*');  
@@ -58,8 +58,8 @@ public class Map extends JFrame{
 		});
 //		zoomButton1.addActionListener(new ActionListener() {
 //			public void actionPerformed(ActionEvent e) {
-//				ReadData.readNode(ReadData.NODE_PATH);//¶ÁnodeÎÄ¼þµÄÊý¾Ý
-//				MakePoint.makeScreenPoint();//×ª»»
+//				ReadData.readNode(ReadData.NODE_PATH);//ï¿½ï¿½nodeï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//				MakePoint.makeScreenPoint();//×ªï¿½ï¿½
 //				for(int i = 0;i<MakePoint.point.size();i++){
 //					MakePoint.point.get(i).x *= 2;
 //					MakePoint.point.get(i).y *= 2;
@@ -72,12 +72,12 @@ public class Map extends JFrame{
 		frame.setLocationRelativeTo(null);
 		frame.add(jToolBar, BorderLayout.PAGE_START);
 		frame.add(new graphics());
-		//frame.setContentPane(new graphics());//°Ñ»­µÄµãÌí¼Óµ½½çÃæÀï
+		//frame.setContentPane(new graphics());//ï¿½Ñ»ï¿½ï¿½Äµï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		System.out.println(nodeId);
 	}
 }
 
-//»­Ã¿¸ö×ø±êµã
+//ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 class graphics extends JPanel {
 	/**
 	 * 
@@ -86,14 +86,12 @@ class graphics extends JPanel {
 
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		ReadData.readNode(ReadData.NODE_PATH);//¶ÁnodeÎÄ¼þµÄÊý¾Ý
-		MakePoint.makeScreenPoint();//×ª»»
-		
-		
-		
+		ReadData.readNode(ReadData.NODE_PATH);//ï¿½ï¿½nodeï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		MakePoint.makeScreenPoint();//×ªï¿½ï¿½
+	
 		for(int i = 0;i<MakePoint.point.size();i++){
-			g.drawString(".",MakePoint.point.get(i).x,MakePoint.point.get(i).y);//»­µã
-			g.setColor(Color.RED);//ÉèÖÃ»­±ÊÑÕÉ«
+			g.drawString(".",MakePoint.point.get(i).x,MakePoint.point.get(i).y);//ï¿½ï¿½ï¿½ï¿½
+			g.setColor(Color.RED);//set brush's color
 		}
 	}
 }
