@@ -58,7 +58,6 @@ public class Map extends JFrame{
 	}
 }
 
-//��ÿ�������
 class graphics extends JPanel {
 	/**
 	 * 
