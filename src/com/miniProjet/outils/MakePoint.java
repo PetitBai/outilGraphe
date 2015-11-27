@@ -3,10 +3,10 @@ package com.miniProjet.outils;
 import java.awt.Point;
 import java.util.ArrayList;
 /*
- * �Ѷ������ľ�γ��ת�����Ļ���꣬����������������Ͽ��ģ��������£�
+ * change longitute and latitude to view point,you can read the article as follow link:
  * http://blog.csdn.net/pipi0714/article/details/5987107
- * ���������Ҳû��̫�����ù����ĸ�ֱ���ð�
- * ��Ҫ����д��changeToScreenPoint()������
+ *
+ * 
  */
 public class MakePoint {
 	public static ArrayList<Point> point = new ArrayList<Point>();
