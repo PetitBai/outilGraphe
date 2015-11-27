@@ -4,7 +4,7 @@ package com.miniProjet.test;
 import com.miniProjet.view.Map;
 
 /*
- * ���Ժ���
+ * Test the program.
  */
 public class Test {
 
