@@ -1,5 +1,6 @@
 package com.miniProjet.test;
 
+import com.miniProjet.outils.ReadData;
 //import com.miniProjet.outils.*;
 import com.miniProjet.view.Map;
 
@@ -10,7 +11,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		Map.makeMap();
-		
+		 
 	}
 
 }

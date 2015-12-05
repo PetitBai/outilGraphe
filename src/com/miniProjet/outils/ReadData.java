@@ -8,8 +8,8 @@ import java.util.ArrayList;
  */
 public class ReadData {
 		//the path of node and arc files
-		public static final String NODE_PATH = "Data/sf_noeuds.csv";
-		public static final String ARC_PATH = "Data/paris_arcs.csv";
+		public static final String NODE_PATH = "Data/berlin_noeuds.csv";
+		public static final String ARC_PATH = "Data/berlin_arcs.csv";
 		
 		//two arraylists for saving the values of longitude and latitude
 		public static ArrayList<Double> longitude = new ArrayList<Double>();
@@ -53,8 +53,7 @@ public class ReadData {
 	            reader.readLine();
 	            String line = null;
 	          
-	            while((line=reader.readLine())!=null){
-	            	
+	            while((line=reader.readLine())!=null){	            	
 	            	String item[] = line.split("\t"); 
 	                //change the value type from sting to int
 	                int iSource = Integer.parseInt(item[item.length-4]);

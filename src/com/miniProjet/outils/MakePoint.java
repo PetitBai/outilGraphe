@@ -8,7 +8,6 @@ import java.util.ArrayList;
  * i don't all understand the article,just use the method
  * the most code is in the method changeToScreenPoint()
  * 
- * Yeah, I will check it out!
  */
 public class MakePoint {
 	public static ArrayList<Point> point = new ArrayList<Point>();
@@ -52,12 +51,12 @@ public class MakePoint {
          * according to the node file's name to set the value of DIVISOR
          * because if we set DIVISOR only one value ,we can't get all the map
          */
-        if(filename.equals("paris_noeuds.csv")){
+        if(filename.equals("Data/paris_noeuds.csv")){
         	 DIVISOR = 36;
              point.x = (int)dx/DIVISOR - 277300;       
              point.y = (int)dy/DIVISOR - 42600;
         }
-        if(filename.equals("berlin_noeuds.csv")){
+        if(filename.equals("Data/berlin_noeuds.csv")){
        	 	DIVISOR = 62;
             point.x = (int)dx/DIVISOR - 136570;       
             point.y = (int)dy/DIVISOR - 31100;
